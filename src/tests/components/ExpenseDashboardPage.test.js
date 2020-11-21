@@ -5,9 +5,4 @@ import ExpenseDashboardPage from '../../components/ExpenseDashboardPage';
 test('should render ExpenseDashboardPage correctly', () => {
     const wrapper = shallow(<ExpenseDashboardPage />);
     expect(wrapper).toMatchSnapshot();
-
-    // expect(wrapper.find('h1').length).toBe(1);
-    // const renderer = new ReactShallowRendering();
-    // renderer.render(<Header />);
-    // expect(renderer.getRenderOutput()).toMatchSnapshot();
 });
