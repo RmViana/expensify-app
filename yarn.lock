@@ -2430,7 +2430,7 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-object-rest-spread@^7.0.0:
+babel-plugin-transform-object-rest-spread@7.0.0-alpha.20:
   version "7.0.0-alpha.20"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-7.0.0-alpha.20.tgz#ef3b3a463fa28df20476e9332a546f34929465ea"
   integrity sha512-O+X1b5hDy40DAVyJG2liEcB9q1pQclhceDyj7ZYh7XALKYi4XUEIcld10CyhX8G63bYOP0RpIWOq7cU4dk2NbA==
