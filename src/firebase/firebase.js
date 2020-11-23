@@ -16,26 +16,7 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref().set({
-    name: 'Romildo Alves',
-    age: 24,
-    stressLevel: 6,
-    job: {
-        title: 'Software Engineer',
-        company: 'Google'
-    },
-    location: {
-        city: 'São Paulo',
-        country: 'Brazil'
-    }
-}).then(() => {
-    console.log('Data is saved!');
-}).catch((e) => {
-    console.log('This failed.', e);
-});
-
-database.ref().update({
-    stressLevel: 7,
-    'job/company': 'Amazon',
-    'location/city': 'Seattle'
+database.ref().on('value', (snapshot) => {
+    const val = snapshot.val();
+    console.log(`${val.name} is a ${val.job.title} at ${val.job.company}.`);
 });
