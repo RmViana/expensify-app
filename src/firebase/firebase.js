@@ -30,11 +30,4 @@ database.ref().set({
     console.log('This failed.', e);
 });
 
-database.ref('attributes').set({
-    height: 1.8,
-    weight: 70
-}).then(() => {
-    console.log('Second call worked.');
-}).catch((e) => {
-    console.log('Things didnt worked for the second error.')
-});
+database.ref('isSingle').set(null);
