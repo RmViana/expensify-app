@@ -14,6 +14,27 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref().set({
-    name: 'Romildo Alves'
+const database = firebase.database();
+
+database.ref().set({
+    name: 'Romildo Alves',
+    age: 24,
+    isSingle: true,
+    location: {
+        city: 'São Paulo',
+        country: 'Brazil'
+    }
+}).then(() => {
+    console.log('Data is saved!');
+}).catch((e) => {
+    console.log('This failed.', e);
+});
+
+database.ref('attributes').set({
+    height: 1.8,
+    weight: 70
+}).then(() => {
+    console.log('Second call worked.');
+}).catch((e) => {
+    console.log('Things didnt worked for the second error.')
 });
