@@ -19,7 +19,11 @@ const database = firebase.database();
 database.ref().set({
     name: 'Romildo Alves',
     age: 24,
-    isSingle: true,
+    stressLevel: 6,
+    job: {
+        title: 'Software Engineer',
+        company: 'Google'
+    },
     location: {
         city: 'São Paulo',
         country: 'Brazil'
@@ -30,4 +34,8 @@ database.ref().set({
     console.log('This failed.', e);
 });
 
-database.ref('isSingle').set(null);
+database.ref().update({
+    stressLevel: 7,
+    'job/company': 'Amazon',
+    'location/city': 'Seattle'
+});
