@@ -13,7 +13,7 @@ export class AddExpensePage extends React.Component{
         return (
             <div>
                 <div className="page-header">
-                    <div clasName="content-container">
+                    <div className="content-container">
                         <h1 className="page-header__title">Add Expense</h1>
                     </div>
                 </div>
